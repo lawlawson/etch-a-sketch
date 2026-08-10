@@ -1,8 +1,14 @@
 body {
-  
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.grid-square {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: #ccc;
 }
