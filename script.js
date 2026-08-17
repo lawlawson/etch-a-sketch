@@ -9,3 +9,5 @@ for (let i = 0; i < 256; i++) {
     square.style.backgroundColor = '#000';
   });
 }
+
+prompt('Enter the number of squares per side (max 100):', '16');
