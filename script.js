@@ -10,11 +10,13 @@ for (let i = 0; i < 256; i++) {
   });
 }
 
-prompt('Enter the number of squares per side (max 100):', '16');
+function resetGrid() {
+  numSquares = parseInt(
+    prompt('Enter the number of squares per side (max 100):', '16'),
+  );
 
-if (isNaN(numSquares) || numSquares < 1 || numSquares > 100) {
-  alert('Please enter a valid number between 1 and 100.');
-  return;
+  if (isNaN(numSquares) || numSquares < 1 || numSquares > 100) {
+    alert('Please enter a valid number between 1 and 100.');
+    return;
+  }
 }
-
-container.innerHTML = '';
