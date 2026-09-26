@@ -1,13 +1,25 @@
 const container = document.querySelector('.container');
 
-for (let i = 0; i < 256; i++) {
-  const square = document.createElement('div');
-  container.append(square);
-  square.classList.add('grid-square');
+// for (let i = 0; i < 256; i++) {
+//   const square = document.createElement('div');
+//   container.append(square);
+//   square.classList.add('grid-square');
 
-  square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = '#000';
-  });
+//   square.addEventListener('mouseover', () => {
+//     square.style.backgroundColor = '#000';
+//   });
+// }
+
+function createGrid(numSquares) {
+  for (let i = 0; i < numSquares * numSquares; i++) {
+    const square = document.createElement('div');
+    container.append(square);
+    square.classList.add('grid-square');
+
+    square.addEventListener('mouseover', () => {
+      square.style.backgroundColor = '#000';
+    });
+  }
 }
 
 function resetGrid() {
@@ -24,14 +36,4 @@ function resetGrid() {
   }
 }
 
-function createGrid(numSquares) {
-  for (let i = 0; i < numSquares * numSquares; i++) {
-    const square = document.createElement('div');
-    container.append(square);
-    square.classList.add('grid-square');
-
-    square.addEventListener('mouseover', () => {
-      square.style.backgroundColor = '#000';
-    });
-  }
-}
+createGrid(16);
