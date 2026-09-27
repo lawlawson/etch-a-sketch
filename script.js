@@ -1,8 +1,11 @@
 const container = document.querySelector('.container');
 
 function createGrid(numSquares) {
+  let size = 960 / numSquares;
   for (let i = 0; i < numSquares * numSquares; i++) {
     const square = document.createElement('div');
+    square.style.width = `${size}px`;
+    square.style.height = `${size}px`;
     container.append(square);
     square.classList.add('grid-square');
 
