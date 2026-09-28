@@ -15,8 +15,6 @@ main {
 }
 
 .grid-square {
-  /* width: 30px;
-  height: 30px; */
   gap: 1px;
   background-color: #ccc;
 }
